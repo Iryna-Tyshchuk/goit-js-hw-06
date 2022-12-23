@@ -6,19 +6,22 @@ const btnCreateEl = document.querySelector(".js-create-btn");
 const btnDestroyEl = document.querySelector(".js-destroy-btn");
 const divCreateBoxesEl = document.querySelector("#boxes");
 
-let widthtEl = 30;
-let heightEl = 30;
-let htmlContent = [];
+// let widthtEl = 30;
+// let heightEl = 30;
+
 function createBoxes(amount) {
+  let htmlContent = [];
   for (let i = 0; i < amount; i += 1) {
     const newDiv = document.createElement("div");
     newDiv.style.backgroundColor = getRandomHexColor();
-    newDiv.style.width = "30px"; //не знаю як придумати збільшити розмір на кожній ітераціі
-    newDiv.style.height = "30px";
+    newDiv.style.width = `${30 + i * 10}px`;
+    newDiv.style.height = `${30 + i * 10}px`;
     newDiv.style.borderRadius = "5px";
     htmlContent.push(newDiv);
   }
   divCreateBoxesEl.append(...htmlContent);
+
+  // inputEl.value = "";
 }
 
 function destroyBoxes() {

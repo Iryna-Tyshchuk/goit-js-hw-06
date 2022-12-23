@@ -1,8 +1,8 @@
 const formEL = document.querySelector(".login-form");
-const objLogPassw = {
-  email: "",
-  password: "",
-};
+// const objLogPassw = {
+//   email: "",
+//   password: "",
+// };
 
 formEL.addEventListener("submit", handleSubmit);
 
@@ -15,10 +15,10 @@ function handleSubmit(event) {
   if (email.value === "" || password.value === "") {
     return alert("Please fill in all the fields!");
   }
-  objLogPassw.email = email.value;
-  objLogPassw.password = password.value;
+  // objLogPassw.email = email.value;
+  // objLogPassw.password = password.value;
 
-  //   console.log(`Login: ${email.value}, Password: ${password.value}`);
+  console.log({ email: email.value, password: password.value });
   event.currentTarget.reset();
 }
-console.log(objLogPassw);
+// console.log(objLogPassw);
